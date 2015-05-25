@@ -92,7 +92,7 @@ double projectionMatrix[16];
 
 
 int initialGuess = 1;
-int drawSine = 0, drawHead = 1, drawAxis = 1, drawNormals = 0, blending = 1, drawLight = 1, drawBackground = 1;
+int drawSine = 0, drawHead = 0, drawAxis = 1, drawNormals = 0, blending = 1, drawLight = 1, drawBackground = 1;
 int aLastHeadW, aLastHeadH;
 int headRefX, headRefY;
 
@@ -214,85 +214,85 @@ void drawCentralAxis(){
 	
 	
 }
-void drawReferenceAxis(){
-
-	glBegin(GL_LINES);
-	glColor3f(1.0f, 0.0f, 0.0);
-	glVertex3f(0.0f, 0.0f, 0.0f);
-	glVertex3f(1000.0f, 0.0f, 0.0f);
-	glEnd();
-	glBegin(GL_LINES);
-	glColor3f(0.9f, 0.3f, 0.0);
-	glVertex3f(0.0f, 0.0f, 0.0f);
-	glVertex3f(-1000.0f, 0.0f, 0.0f);
-	glEnd();
-	/*
-	double modelview[16], projection[16];
-	int viewport[4];
-	float z;
-	//get the projection matrix
-	glGetDoublev( GL_PROJECTION_MATRIX, projection );
-	//get the modelview matrix
-	glGetDoublev( GL_MODELVIEW_MATRIX, modelview );
-	//get the viewport
-	glGetIntegerv( GL_VIEWPORT, viewport );
-
-	printf("Projection Matrix:\n");
-	for(int i=0;i<4;i++){
-	for(int j=0;j<4;j++){
-	printf("%lf ",projection[i*4+j]);
-	}
-	printf("\n");
-	}
-	printf("\n");
-
-	printf("Modelview Matrix:\n");
-	for(int i=0;i<4;i++){
-	for(int j=0;j<4;j++){
-	printf("%lf ",modelview[i*4+j]);
-	}
-	printf("\n");
-	}
-	printf("\n");
-
-	printf("Viewport Matrix:\n");
-	for(int i=0;i<4;i++){
-	printf("%d ",viewport[i]);
-	}
-	printf("\n");*/
-
-
-	glBegin(GL_LINES);
-	glColor3f(0.0f, 1.0f, 0.0);
-	glVertex3f(0.0f, 0.0f, 0.0f);
-	glVertex3f(0.0f, 1000.0f, 0.0f);
-	glEnd();
-
-	glBegin(GL_LINES);
-	glColor3f(0.3f, 0.8f, 0.0);
-	glVertex3f(0.0f, 0.0f, 0.0f);
-	glVertex3f(0.0f, -1000.0f, 0.0f);
-	glEnd();
-
-	/*      glBegin(GL_LINES);
-	glColor3f(0.0f,1.0f,0.0);
-	glVertex3f(100.0f, 0.0f,0.0f);
-	glVertex3f(100.0f, 1000.0f,0.0f);
-	glEnd();*/
-
-	glBegin(GL_LINES);
-	glColor3f(0.0f, 0.0f, 1.0);
-	glVertex3f(0.0f, 0.0f, 0.0f);
-	glVertex3f(0.0f, 0.0f, 1000.0f);
-	glEnd();
-
-	glBegin(GL_LINES);
-	glColor3f(0.0f, 0.0f, 0.5f);
-	glVertex3f(0.0f, 0.0f, 0.0f);
-	glVertex3f(0.0f, 0.0f, -1000.0f);
-	glEnd();
-
-}
+//void drawReferenceAxis(){
+//
+//	glBegin(GL_LINES);
+//	glColor3f(1.0f, 0.0f, 0.0);
+//	glVertex3f(0.0f, 0.0f, 0.0f);
+//	glVertex3f(1000.0f, 0.0f, 0.0f);
+//	glEnd();
+//	glBegin(GL_LINES);
+//	glColor3f(0.9f, 0.3f, 0.0);
+//	glVertex3f(0.0f, 0.0f, 0.0f);
+//	glVertex3f(-1000.0f, 0.0f, 0.0f);
+//	glEnd();
+//	/*
+//	double modelview[16], projection[16];
+//	int viewport[4];
+//	float z;
+//	//get the projection matrix
+//	glGetDoublev( GL_PROJECTION_MATRIX, projection );
+//	//get the modelview matrix
+//	glGetDoublev( GL_MODELVIEW_MATRIX, modelview );
+//	//get the viewport
+//	glGetIntegerv( GL_VIEWPORT, viewport );
+//
+//	printf("Projection Matrix:\n");
+//	for(int i=0;i<4;i++){
+//	for(int j=0;j<4;j++){
+//	printf("%lf ",projection[i*4+j]);
+//	}
+//	printf("\n");
+//	}
+//	printf("\n");
+//
+//	printf("Modelview Matrix:\n");
+//	for(int i=0;i<4;i++){
+//	for(int j=0;j<4;j++){
+//	printf("%lf ",modelview[i*4+j]);
+//	}
+//	printf("\n");
+//	}
+//	printf("\n");
+//
+//	printf("Viewport Matrix:\n");
+//	for(int i=0;i<4;i++){
+//	printf("%d ",viewport[i]);
+//	}
+//	printf("\n");*/
+//
+//
+//	glBegin(GL_LINES);
+//	glColor3f(0.0f, 1.0f, 0.0);
+//	glVertex3f(0.0f, 0.0f, 0.0f);
+//	glVertex3f(0.0f, 1000.0f, 0.0f);
+//	glEnd();
+//
+//	glBegin(GL_LINES);
+//	glColor3f(0.3f, 0.8f, 0.0);
+//	glVertex3f(0.0f, 0.0f, 0.0f);
+//	glVertex3f(0.0f, -1000.0f, 0.0f);
+//	glEnd();
+//
+//	/*      glBegin(GL_LINES);
+//	glColor3f(0.0f,1.0f,0.0);
+//	glVertex3f(100.0f, 0.0f,0.0f);
+//	glVertex3f(100.0f, 1000.0f,0.0f);
+//	glEnd();*/
+//
+//	glBegin(GL_LINES);
+//	glColor3f(0.0f, 0.0f, 1.0);
+//	glVertex3f(0.0f, 0.0f, 0.0f);
+//	glVertex3f(0.0f, 0.0f, 1000.0f);
+//	glEnd();
+//
+//	glBegin(GL_LINES);
+//	glColor3f(0.0f, 0.0f, 0.5f);
+//	glVertex3f(0.0f, 0.0f, 0.0f);
+//	glVertex3f(0.0f, 0.0f, -1000.0f);
+//	glEnd();
+//
+//}
 
 void loadRaw(char* file){
 
@@ -449,83 +449,83 @@ glEnd();
 
 }*/
 
-void drawHeadModel(float scale, int headWidth, int headHeight, int myRefX, int myRefY){
-
-	float deltaX = 0.0;//-(myRefX/(float)headWidth*5.0-2.5);
-	float deltaY = 0.0;//myRefY/(float)headHeight*7.5-3.75;
-	float deltaZ = 0.0;//-4.0f * cos(deltaX/2.5*3.141593);
-
-
-	getReferenceCoordinate(&deltaX, &deltaY, &deltaZ);
-	deltaX -= 0.5;
-	deltaY += 0.5;
-	deltaZ += 0.5;
-	//printf("Reference %f %f %f (%f)\n",deltaX,deltaY,deltaZ,scale);
-
-	for (int i = 0; i<3036; i++){
-		//glColor3f (i/3036.0, 0.0, 0.0);
-
-
-		float v1x = triangles[i].vert[1][0] - triangles[i].vert[0][0];
-		float v1y = triangles[i].vert[1][1] - triangles[i].vert[0][1];
-		float v1z = triangles[i].vert[1][2] - triangles[i].vert[0][2];
-
-		float v2x = triangles[i].vert[2][0] - triangles[i].vert[0][0];
-		float v2y = triangles[i].vert[2][1] - triangles[i].vert[0][1];
-		float v2z = triangles[i].vert[2][2] - triangles[i].vert[0][2];
-
-		float nx = 5 * (v1y*v2z - v2y*v1z);
-		float ny = 5 * (v1z*v2x - v2z*v1x);
-		float nz = 5 * (v1x*v2y - v2x*v1y);
-
-		// calculate the length of the vector
-		float len = (float)(sqrt((nx * nx) + (ny * ny) + (nz * nz)));
-
-		// avoid division by 0
-		if (len == 0.0f)
-			len = 1.0f;
-
-		// reduce to unit size
-		nx /= len;
-		ny /= len;
-		nz /= len;
-
-
-		glNormal3f(nx, ny, nz);
-
-		if (drawNormals){
-			glBegin(GL_LINES);
-
-			glColor3f(1.0f, 0.0f, 0.0);
-
-			glVertex3f(scale* (triangles[i].vert[0][0] + deltaX),
-				scale* (triangles[i].vert[0][1] + deltaY),
-				scale* (triangles[i].vert[0][2] + deltaZ));
-
-			glVertex3f(scale* (triangles[i].vert[0][0] + deltaX + nx),
-				scale* (triangles[i].vert[0][1] + deltaY + ny),
-				scale* (triangles[i].vert[0][2] + deltaZ + nz));
-
-			glEnd();
-		}
-
-
-		glBegin(GL_TRIANGLES);
-		glColor4d(1.0, 1.0, 1.0, 0.65);
-
-
-
-		for (int j = 0; j<3; j++){
-			glVertex3f(scale* (triangles[i].vert[j][0]) - deltaX,
-				scale* (triangles[i].vert[j][1]) - deltaY,
-				scale* (triangles[i].vert[j][2]) - deltaZ);
-		}
-		glEnd();
-
-	}
-
-
-}
+//void drawHeadModel(float scale, int headWidth, int headHeight, int myRefX, int myRefY){
+//
+//	float deltaX = 0.0;//-(myRefX/(float)headWidth*5.0-2.5);
+//	float deltaY = 0.0;//myRefY/(float)headHeight*7.5-3.75;
+//	float deltaZ = 0.0;//-4.0f * cos(deltaX/2.5*3.141593);
+//
+//
+//	getReferenceCoordinate(&deltaX, &deltaY, &deltaZ);
+//	deltaX -= 0.5;
+//	deltaY += 0.5;
+//	deltaZ += 0.5;
+//	//printf("Reference %f %f %f (%f)\n",deltaX,deltaY,deltaZ,scale);
+//
+//	for (int i = 0; i<3036; i++){
+//		//glColor3f (i/3036.0, 0.0, 0.0);
+//
+//
+//		float v1x = triangles[i].vert[1][0] - triangles[i].vert[0][0];
+//		float v1y = triangles[i].vert[1][1] - triangles[i].vert[0][1];
+//		float v1z = triangles[i].vert[1][2] - triangles[i].vert[0][2];
+//
+//		float v2x = triangles[i].vert[2][0] - triangles[i].vert[0][0];
+//		float v2y = triangles[i].vert[2][1] - triangles[i].vert[0][1];
+//		float v2z = triangles[i].vert[2][2] - triangles[i].vert[0][2];
+//
+//		float nx = 5 * (v1y*v2z - v2y*v1z);
+//		float ny = 5 * (v1z*v2x - v2z*v1x);
+//		float nz = 5 * (v1x*v2y - v2x*v1y);
+//
+//		// calculate the length of the vector
+//		float len = (float)(sqrt((nx * nx) + (ny * ny) + (nz * nz)));
+//
+//		// avoid division by 0
+//		if (len == 0.0f)
+//			len = 1.0f;
+//
+//		// reduce to unit size
+//		nx /= len;
+//		ny /= len;
+//		nz /= len;
+//
+//
+//		glNormal3f(nx, ny, nz);
+//
+//		if (drawNormals){
+//			glBegin(GL_LINES);
+//
+//			glColor3f(1.0f, 0.0f, 0.0);
+//
+//			glVertex3f(scale* (triangles[i].vert[0][0] + deltaX),
+//				scale* (triangles[i].vert[0][1] + deltaY),
+//				scale* (triangles[i].vert[0][2] + deltaZ));
+//
+//			glVertex3f(scale* (triangles[i].vert[0][0] + deltaX + nx),
+//				scale* (triangles[i].vert[0][1] + deltaY + ny),
+//				scale* (triangles[i].vert[0][2] + deltaZ + nz));
+//
+//			glEnd();
+//		}
+//
+//
+//		glBegin(GL_TRIANGLES);
+//		glColor4d(1.0, 1.0, 1.0, 0.65);
+//
+//
+//
+//		for (int j = 0; j<3; j++){
+//			glVertex3f(scale* (triangles[i].vert[j][0]) - deltaX,
+//				scale* (triangles[i].vert[j][1]) - deltaY,
+//				scale* (triangles[i].vert[j][2]) - deltaZ);
+//		}
+//		glEnd();
+//
+//	}
+//
+//
+//}
 
 
 void checkTransparency(){
@@ -716,7 +716,7 @@ void generateTexture(int width, int height){
 	//free(data);
 
 }
-std::vector<float>vect;
+
 /* The main drawing function. */
 
 void DrawGLScene(void)

@@ -34,7 +34,7 @@ public:
 private:
 	int x;
 	int y;
-	LPPOINT lpPoint;
+	
 public:
 	Mouse();
 	~Mouse();
