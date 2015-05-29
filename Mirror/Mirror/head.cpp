@@ -65,6 +65,7 @@ Mouse mouse;
 #include <glut.h>    // Header File For The GLUT Library
 #include <GL/gl.h>      // Header File For The OpenGL32 Library
 #include <GL/glu.h>     // Header File For The GLu32 Library
+#define NOMINMAX
 #include <Windows.h>
 
 
@@ -92,7 +93,7 @@ double projectionMatrix[16];
 
 
 int initialGuess = 1;
-int drawSine = 0, drawHead = 0, drawAxis = 1, drawNormals = 0, blending = 1, drawLight = 1, drawBackground = 1;
+int drawSine = 0, drawHead = 0, drawAxis = 1, drawNormals = 0, blending = 1, drawLight = 1, drawBackground = 1, moveMouse;
 int aLastHeadW, aLastHeadH;
 int headRefX, headRefY;
 
@@ -748,7 +749,8 @@ void DrawGLScene(void)
 	double euler_y = atan2(-glPositMatrix[8], sqrt((glPositMatrix[9] * glPositMatrix[9]) + (glPositMatrix[10] * glPositMatrix[10])));
 	double euler_z = atan2(glPositMatrix[4], glPositMatrix[0]);
 	//Sleep(1000);
-	std::cout << euler_x << "  " << euler_y << "  " << euler_z << std::endl;
+	std::cout << euler_x /*<< "  " << euler_y << "  " << euler_z*/ << std::endl;
+	if (moveMouse)
 	mouse.move_mouse(euler_x, euler_y);
 	/*std::cout << "*******GLPOSIT MATRIX X Y Z************" << std::endl;
 	Sleep(200);
@@ -902,7 +904,9 @@ void keyPressed(unsigned char key, int x, int y)
 	case 'H':
 		drawHead = !drawHead;
 		break;
-
+	case 'm':
+		moveMouse = !moveMouse;
+		break;
 	case 'd':
 	case 'D':
 		drawBackground = !drawBackground;

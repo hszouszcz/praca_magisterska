@@ -18,24 +18,26 @@
     <ClCompile Include="head.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\ehci\src\ehci.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+   
     <ClCompile Include="Mouse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="OpenGL_Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EyeTracker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\ehci\include\ehci.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+  
     <ClInclude Include="Mouse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="OpenGL_Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EyeTracker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

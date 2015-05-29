@@ -162,12 +162,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\ehci\src\ehci.cpp" />
+    <ClCompile Include="EyeTracker.cpp" />
     <ClCompile Include="head.cpp" />
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="OpenGL_Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\ehci\include\ehci.h" />
+    <ClInclude Include="EyeTracker.h" />
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="OpenGL_Utils.h" />
   </ItemGroup>
